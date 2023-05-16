@@ -1,0 +1,54 @@
+<h1 id="número-e">Número e</h1>
+<p>O número <span class="math inline">\(e\)</span> pode ser calculado através da seguinte série:</p>
+<p><span class="math inline">\(e = \sum_{n = 0}^{\infty} 1/n!\)</span></p>
+<p>Podemos estimar o erro de aproximação para o valor <span class="math inline">\(e\)</span> calculando a diferença entre a aproximação atual e aproximação anterior. Para calcular o erro de aproximação relativo, podemos calcular da seguinte maneira:</p>
+<p><span class="math display">\[erro\_relativo = (aproximacao\_atual - aproximacao\_anterior)/aproximacao\_atual\]</span></p>
+<table>
+<thead>
+<tr class="header">
+<th>Termo</th>
+<th>aproximacao</th>
+<th>erro_relativo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>2</td>
+<td>0.5</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>2.5000000000</td>
+<td>0.2000000000</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>2.6666666667</td>
+<td>0.0625000000</td>
+</tr>
+</tbody>
+</table>
+<p>Quando esse erro de aproximação relativo for menor que um certo <span class="math inline">\(\varepsilon\)</span> podemos aceitar a aproximação atual de <span class="math inline">\(e\)</span>.</p>
+<p>Sua tarefa é encontrar uma aproximação de <span class="math inline">\(e\)</span> considerando que o erro de aproximação relativo deve ser menor que um valor <span class="math inline">\(\varepsilon\)</span>.</p>
+<p><strong>Entrada</strong></p>
+<p>A entrada é composta por um número ponto flutuante com precisão dupla representando <span class="math inline">\(\varepsilon\)</span>.</p>
+<p><strong>Saída</strong></p>
+<p>A saída é composta por uma única linha contendo uma aproximação de <span class="math inline">\(e\)</span> tal que o erro de aproximação relativo de <span class="math inline">\(e\)</span> seja menor que <span class="math inline">\(\varepsilon\)</span>. Imprima essa aproximação com 15 casas decimais.</p>
+<p><strong>Entrada</strong></p>
+<pre><code>0.1</code></pre>
+<p><strong>Saída</strong></p>
+<pre><code>2.666666666666667</code></pre>
+<p><strong>Entrada</strong></p>
+<pre><code>0.01</code></pre>
+<p><strong>Saída</strong></p>
+<pre><code>2.716666666666666</code></pre>
+<p><strong>Entrada</strong></p>
+<pre><code>0.001</code></pre>
+<p><strong>Saída</strong></p>
+<pre><code>2.718055555555555</code></pre>

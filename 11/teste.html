@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Readme</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+</head>
+<body>
+<h1 id="número-e">Número e</h1>
+<p>O número <span class="math inline"><em>e</em></span> pode ser calculado através da seguinte série:</p>
+<p><br /><span class="math display">$$e = \sum_{n=0}^{\infty} 1/n!$$</span><br /></p>
+<p>Podemos estimar o erro de aproximação para o valor <span class="math inline"><em>e</em></span> calculando a diferença entre a aproximação atual e aproximação anterior. Para calcular o erro de aproximação relativo, podemos calcular da seguinte maneira:</p>
+<p><br /><span class="math display"><em>e</em><em>r</em><em>r</em><em>o</em>_<em>r</em><em>e</em><em>l</em><em>a</em><em>t</em><em>i</em><em>v</em><em>o</em> = (<em>a</em><em>p</em><em>r</em><em>o</em><em>x</em><em>i</em><em>m</em><em>a</em><em>c</em><em>a</em><em>o</em>_<em>a</em><em>t</em><em>u</em><em>a</em><em>l</em> − <em>a</em><em>p</em><em>r</em><em>o</em><em>x</em><em>i</em><em>m</em><em>a</em><em>c</em><em>a</em><em>o</em>_<em>a</em><em>n</em><em>t</em><em>e</em><em>r</em><em>i</em><em>o</em><em>r</em>)/<em>a</em><em>p</em><em>r</em><em>o</em><em>x</em><em>i</em><em>m</em><em>a</em><em>c</em><em>a</em><em>o</em>_<em>a</em><em>t</em><em>u</em><em>a</em><em>l</em></span><br /></p>
+<table>
+<thead>
+<tr class="header">
+<th>Termo</th>
+<th>aproximacao</th>
+<th>erro_relativo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>2</td>
+<td>0.5</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>2.5000000000</td>
+<td>0.2000000000</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>2.6666666667</td>
+<td>0.0625000000</td>
+</tr>
+</tbody>
+</table>
+<p>Quando esse erro de aproximação relativo for menor que um certo <span class="math inline"><em>ε</em></span> podemos aceitar a aproximação atual de <span class="math inline"><em>e</em></span>.</p>
+<p>Sua tarefa é encontrar uma aproximação de <span class="math inline"><em>e</em></span> considerando que o erro de aproximação relativo deve ser menor que um valor <span class="math inline"><em>ε</em></span>.</p>
+<p><strong>Entrada</strong></p>
+<p>A entrada é composta por um número ponto flutuante com precisão dupla representando <span class="math inline"><em>ε</em></span>.</p>
+<p><strong>Saída</strong></p>
+<p>A saída é composta por uma única linha contendo uma aproximação de <span class="math inline"><em>e</em></span> tal que o erro de aproximação relativo de <span class="math inline"><em>e</em></span> seja menor que <span class="math inline"><em>ε</em></span>. Imprima essa aproximação com 15 casas decimais.</p>
+<p><strong>Entrada</strong></p>
+<pre><code>0.1</code></pre>
+<p><strong>Saída</strong></p>
+<pre><code>2.666666666666667</code></pre>
+<p><strong>Entrada</strong></p>
+<pre><code>0.01</code></pre>
+<p><strong>Saída</strong></p>
+<pre><code>2.716666666666666</code></pre>
+<p><strong>Entrada</strong></p>
+<pre><code>0.001</code></pre>
+<p><strong>Saída</strong></p>
+<pre><code>2.718055555555555</code></pre>
+</body>
+</html>

@@ -1,0 +1,29 @@
+case=
+input=0.1
+output="2.666666666666667
+"
+grade reduction=100%
+
+case=
+input=0.01
+output="2.716666666666666
+"
+grade reduction=100%
+
+case=
+input=0.001
+output="2.718055555555555
+"
+grade reduction=100%
+
+case=
+input=0.0001
+output="2.718253968253968
+"
+grade reduction=100%
+
+case=
+input=0.00001
+output="2.718278769841270
+"
+grade reduction=100%

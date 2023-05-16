@@ -1,0 +1,60 @@
+<h1 id="representando-números-decimais-como-frações">Representando números decimais como frações</h1>
+<p>O número decimal <span class="math inline">(0.375)<sub>10</sub></span> pode ser representado no sistema em ponto flutuante <span class="math inline"><em>F</em>(2, 5,  − 2, 2)</span> como <span class="math inline">0.11 × 2<sup> − 1</sup></span>, ou seja, <span class="math inline">(1/2 + 1/4) × 2<sup> − 1</sup> = (1/4 + 1/8) = 3/8</span>. Neste caso, o erro absoluto da representação é 0.</p>
+<p>Já o número <span class="math inline">(0.1)<sub>10</sub></span> pode ser representado no sistema ponto flutuante <span class="math inline"><em>F</em>(2, 5,  − 5, 5)</span> como <span class="math inline">(0.11001) × 2<sup> − 3</sup></span> que pode ser representado como fração da seguinte maneira</p>
+<table>
+<thead>
+<tr class="header">
+<th><span class="math inline">(1/2 + 1/4 + 1/32) × 2<sup> − 3</sup></span></th>
+<th>=</th>
+<th><span class="math inline">(1/16 + 1/32 + 1/256)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td>=</td>
+<td><span class="math inline">(16 + 8 + 1)/256</span></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>=</td>
+<td><span class="math inline">25/256</span></td>
+</tr>
+</tbody>
+</table>
+<p>Note que o erro absoluto dessa representação é <span class="math inline">1/10 − 25/256 = 6/2560 = 3/1280</span></p>
+<p><strong>Entrada</strong></p>
+<p>A entrada é composta por duas linhas. A primeira linha contém uma fração decimal. A segunda linha é composta por 4 números inteiros representando a base <span class="math inline"><em>β</em></span>, a precisão <span class="math inline"><em>p</em></span> e os limitantes do expoente <span class="math inline"><em>m</em></span> e <span class="math inline"><em>M</em></span>.</p>
+<p><strong>Saída</strong></p>
+<p>A saída é composta por duas linhas. A primeira linha é composta por uma fração relacionada com representação da fração decimal no sistema em ponto flutuante <span class="math inline"><em>F</em>(<em>β</em>, <em>p</em>, <em>m</em>, <em>M</em>)</span>. A segunda linha é composta por uma fração relacionada com o erro absoluto da representação no sistema em ponto flutuante <span class="math inline"><em>F</em>(<em>β</em>, <em>p</em>, <em>m</em>, <em>M</em>)</span>.</p>
+<p><strong>Restrições:</strong></p>
+<ul>
+<li><span class="math inline"><em>M</em> ≥ 0</span></li>
+<li><span class="math inline"><em>m</em> ≤ 0</span></li>
+<li><span class="math inline"><em>β</em> &gt; 0</span></li>
+<li><span class="math inline"><em>p</em> ≥ 0</span></li>
+<li><span class="math inline"><em>x</em> &lt; 0</span></li>
+</ul>
+<p><strong>Entrada</strong></p>
+<pre><code>0.1
+2 5 -5 5</code></pre>
+<p><strong>Saída</strong></p>
+<pre><code>25/256
+3/1280</code></pre>
+<p><strong>Entrada</strong></p>
+<pre><code>0.01 
+2 5 -5 5</code></pre>
+<p><strong>Saída</strong></p>
+<pre><code>underflow</code></pre>
+<p><strong>Entrada</strong></p>
+<pre><code>0.01
+2 5 -6 6</code></pre>
+<p><strong>Saída</strong></p>
+<pre><code>5/512
+3/12800</code></pre>
+<p><strong>Entrada</strong></p>
+<pre><code>0.01
+2 10 -6 6</code></pre>
+<p><strong>Saída</strong></p>
+<pre><code>655/65536
+9/1638400</code></pre>

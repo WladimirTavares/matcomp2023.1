@@ -1,0 +1,38 @@
+>>>>>>>>
+2
+-0.6 2.4 5.5
+5 10
+0.001
+========
+busca ternaria realizou 9 iteracoes
+a solucao está no intervalo [5.627953056,5.628715135]
+<<<<<<<<
+
+
+>>>>>>>>
+3
+4 -6 7 -2.3
+0 1
+0.01
+========
+busca ternaria realizou 6 iteracoes
+a solucao está no intervalo [0.4485596708,0.4526748971]
+<<<<<<<<
+
+>>>>>>>>
+5
+1 -8 44 -91 +85 -26
+0.5 1
+0.02
+========
+busca ternaria realizou 4 iteracoes
+a solucao está no intervalo [0.5555555556,0.5740740741]
+<<<<<<<<
+
+
+
+
+
+
+
+

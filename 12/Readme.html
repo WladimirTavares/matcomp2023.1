@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Readme</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+</head>
+<body>
+<h2 id="soma-mop">Soma MOP</h2>
+<p>Se nos são apresentados os primeiros <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math> termos de uma sequência, é impossível dizer com certeza o valor do próximo termo, pois existem infinitamente muitas funções polinomiais que podem modelar a sequência.</p>
+<p>Como exemplo, vamos considerar a seqüência de números de cubo. Isso é definido pela função geradora,</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>n</mi><mn>3</mn></msup><mo>:</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>8</mn><mo>,</mo><mn>27</mn><mo>,</mo><mn>64</mn><mo>,</mo><mn>125</mn><mo>,</mo><mn>216</mn><mo>,</mo><mi>.</mi><mi>.</mi><mi>.</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">n^3: (1, 8, 27, 64, 125, 216, ...)</annotation></semantics></math></p>
+<p>Suponha que só recebêssemos os dois primeiros termos dessa sequência. Trabalhando no princípio de que “simples é melhor”, devemos assumir um relacionamento linear e prever que o próximo elemento seja 15 (8-1 = 7 = 15- 8). Mesmo se nos apresentassem os três primeiros termos, pelo mesmo princípio de simplicidade, um relacionamento quadrático deveria ser assumido.</p>
+<p>Definiremos <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mo>,</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">OP (k, n)</annotation></semantics></math> como o n-ésimo termo da função geradora polinomial ótima para os primeiros <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math> termos de uma sequência. Deve ficar claro que <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mo>,</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">OP (k, n)</annotation></semantics></math> irá gerar com precisão os termos da sequência para <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>≤</mo><mi>k</mi></mrow><annotation encoding="application/x-tex">n ≤ k</annotation></semantics></math>, e potencialmente o primeiro termo incorreto será <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mo>,</mo><mi>k</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">OP (k, k + 1)</annotation></semantics></math>; em qual caso nós chamaremos isto de um MOP (Mal OP).</p>
+<p>Como base, se nos fosse dado apenas o primeiro termo de seqüência, seria mais sensato assumir constância; isto é, para <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>≥</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">n ≥ 2</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msub><mi>a</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">OP (1, n) = a_0</annotation></semantics></math>.</p>
+<p>Assim, obtemos os seguintes OPs para a seqüência cúbica:</p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn><mo>:</mo><mspace width="1.0em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mtext mathvariant="bold">𝟏</mtext><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo><mi>.</mi><mi>.</mi><mi>.</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">OP (1, n) = 1 : \quad (1, \textbf{1}, 1, 1, ...)</annotation></semantics></math></p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo>,</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>7</mn><mi>n</mi><mo>−</mo><mn>6</mn><mo>:</mo><mspace width="1.0em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>8</mn><mo>,</mo><mtext mathvariant="bold">𝟏𝟓</mtext><mo>,</mo><mi>.</mi><mi>.</mi><mi>.</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">OP (2, n) = 7n -6 : \quad (1, 8, \textbf{15}, ...)</annotation></semantics></math></p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mo>,</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>6</mn><msup><mi>n</mi><mn>2</mn></msup><mo>−</mo><mn>11</mn><mi>n</mi><mo>+</mo><mn>6</mn><mo>:</mo><mspace width="1.0em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>8</mn><mo>,</mo><mn>27</mn><mo>,</mo><mtext mathvariant="bold">𝟓𝟖</mtext><mo>,</mo><mi>.</mi><mi>.</mi><mi>.</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">OP (3, n) = 6n^2-11n + 6 : \quad ( 1, 8, 27, \textbf{58}, ...)</annotation></semantics></math></p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mn>4</mn><mo>,</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msup><mi>n</mi><mn>3</mn></msup><mo>:</mo><mspace width="1.0em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>8</mn><mo>,</mo><mn>27</mn><mo>,</mo><mn>64</mn><mo>,</mo><mn>125</mn><mo>,</mo><mi>.</mi><mi>.</mi><mi>.</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">OP (4, n) = n^3 : \quad (1, 8, 27, 64, 125, ...)</annotation></semantics></math></p>
+<p>Claramente, não existem MOPs para k ≥ 4.</p>
+<p>Considerando a soma dos MOPs, obtemos 1 + 15 + 58 = 74.</p>
+<p>Encontre a soma MOPs para um função geradora de uma sequência.</p>
+<p><strong>Entrada</strong></p>
+<p>A entrada possui duas linhas. A primeira linha contém um inteiro D representando o grau do polinômio dado. A segunda linha N+1 inteiros representando <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>D</mi></msub><mo>,</mo><msub><mi>a</mi><mrow><mi>D</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>a</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">a_D,a_{D-1},\ldots,a_0</annotation></semantics></math> representando os coeficientes do grau do polinômio dado tal que</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><msub><mi>a</mi><mn>1</mn></msub><mi>n</mi><mo>+</mo><msub><mi>a</mi><mn>2</mn></msub><msup><mi>n</mi><mn>2</mn></msup><mo>+</mo><mi>…</mi><mo>+</mo><msub><mi>a</mi><mi>D</mi></msub><msup><mi>n</mi><mi>D</mi></msup></mrow><annotation encoding="application/x-tex">P(n) = a_0 + a_1n+a_2n^2 + \ldots + a_Dn^D</annotation></semantics></math></p>
+<p><strong>Saída</strong> Devolve um inteiro representando a soma dos MOPS obtidas pelos polinômios <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mi>N</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>O</mi><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo>,</mo><mi>N</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>…</mi><mo>+</mo><mi>O</mi><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>D</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>N</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">OP(1,N) + OP(2,N) + \ldots + OP(D-1,N)</annotation></semantics></math></p>
+<p><strong>Entrada</strong></p>
+<pre><code>3
+1 0 0 0</code></pre>
+<p><strong>Saída</strong></p>
+<pre><code>74</code></pre>
+<p><strong>Entrada</strong></p>
+<pre><code>4
+1 -1 1 -1 1</code></pre>
+<p><strong>Saída</strong></p>
+<pre><code>670</code></pre>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Readme</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+</head>
+<body>
+<h1 id="paraquedismo">Paraquedismo</h1>
+<p>A velocidade de um paraquedista em queda livre é dado por</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>=</mo><mfrac><mrow><mi>g</mi><mi>m</mi></mrow><mi>c</mi></mfrac><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><msup><mi>e</mi><mrow><mo>−</mo><mo stretchy="false" form="prefix">(</mo><mi>c</mi><mi>/</mi><mi>m</mi><mo stretchy="false" form="postfix">)</mo><mi>t</mi></mrow></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">v = \frac{gm}{c}(1 - e^{-(c/m)t})</annotation></semantics></math></p>
+<p>onde</p>
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo>=</mo><mn>9</mn><mo>,</mo><mn>8</mn><mi>m</mi><mi>/</mi><msup><mi>s</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">g = 9,8m/s^2</annotation></semantics></math></li>
+<li>m representa a massa do paraquedista.</li>
+<li>c representa coeficiente de arrasto</li>
+<li>t representa o tempo</li>
+</ul>
+<p>Um paraquedista deseja atingir uma velocidade máxima de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math> m/s em seu salto de paraquedas. Determine a massa mínima do seu corpo, considerando que ele está usando um paraquedas com um coeficiente de arrasto de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math> Kg/s e que ele deseja atingir a velocidade máxima <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math> em <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math> segundos após a abertura do paraquedas. Considere que a massa do paraquedista está entre 50 e 100 kg. Resolva com o método da bisseção considerando como critério de parada quando o intervalo da solução for menor 0.001.</p>
+<p><strong>Entrada</strong></p>
+<p>A entrada é composta por quatro números <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math> e <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math> representando o coeficiente de arrasto, a velocidade máxima que o paraquedista deseja atingir e o tempo após a abertura do paraquedas.</p>
+<p><strong>Saída</strong></p>
+<p>A saída é composta de uma única linha contendo a massa mínima do paraquedista com 2 casas decimais.</p>
+<p><strong>Entrada</strong></p>
+<pre><code>15 35 9</code></pre>
+<p><strong>Saída</strong></p>
+<pre><code>59.84</code></pre>
+<p><strong>Entrada</strong></p>
+<pre><code>20 35 9 </code></pre>
+<p><strong>Saída</strong></p>
+<pre><code>79.79</code></pre>
+</body>
+</html>

@@ -1,0 +1,30 @@
+case=
+input=0.1
+2 5 -5 5
+output="25/256
+3/1280
+"
+grade reduction=100%
+
+case=
+input=0.01 
+2 5 -5 5
+output="underflow
+"
+grade reduction=100%
+
+case=
+input=0.01
+2 5 -6 6
+output="5/512
+3/12800
+"
+grade reduction=100%
+
+case=
+input=0.01
+2 10 -6 6
+output="655/65536
+9/1638400
+"
+grade reduction=100%

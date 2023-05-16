@@ -1,0 +1,29 @@
+case=
+input=15 35 9
+output="59.84
+"
+grade reduction=100%
+
+case=
+input=20 35 9 
+output="79.79
+"
+grade reduction=100%
+
+case=
+input=22 35 9
+output="87.77
+"
+grade reduction=100%
+
+case=
+input=24 35 9 
+output="95.74
+"
+grade reduction=100%
+
+case=
+input=0.00001
+output="2.718278769841270
+"
+grade reduction=100%

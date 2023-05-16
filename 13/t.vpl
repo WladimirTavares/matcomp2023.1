@@ -1,0 +1,23 @@
+case=
+input=30 55
+output="2670.11719
+"
+grade reduction=100%
+
+case=
+input=30 65
+output="3002.14844
+"
+grade reduction=100%
+
+case=
+input=50 55
+output="2443.55469
+"
+grade reduction=100%
+
+case=
+input=25 55
+output="2675.00000
+"
+grade reduction=100%

@@ -1,0 +1,23 @@
+case=
+input=0.016 42 28 4 0 20 2
+output="15.92
+"
+grade reduction=100%
+
+case=
+input=0.016 42 28 4 0 20 4
+output="15.9229
+"
+grade reduction=100%
+
+case=
+input=0.012 42 28 4 0 20 2
+output="15.35
+"
+grade reduction=100%
+
+case=
+input=0.016 40 30 5 0 20 2
+output="15.34
+"
+grade reduction=100%

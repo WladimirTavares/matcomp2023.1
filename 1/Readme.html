@@ -1,0 +1,28 @@
+<h1 id="sistema-em-ponto-flutuante">Sistema em Ponto Flutuante</h1>
+<p>Um sistema em ponto flutuante é definido por uma base <span class="math inline"><em>β</em></span>, por uma precisão <span class="math inline"><em>p</em></span> e por limitantes <span class="math inline"><em>m</em></span> e <span class="math inline"><em>M</em></span> para o valor do expoente. Para indicar um determinado sistema em ponto flutuante, escrevemos:</p>
+<p><br /><span class="math display"><em>F</em>(<em>β</em>, <em>p</em>, <em>m</em>, <em>M</em>)</span><br /></p>
+<p>Um número qualquer representado nesse sistema F é escrito da seguinte forma:</p>
+<p><br /><span class="math display"><em>x</em> =  ± 0.<em>d</em><sub>1</sub><em>d</em><sub>2</sub>…<em>d</em><sub><em>p</em></sub> × <em>β</em><sup><em>e</em></sup></span><br /></p>
+<p>onde o expoente <span class="math inline"><em>e</em></span> é um inteiro tal que <span class="math inline"><em>m</em> ≤ <em>e</em> ≤ <em>M</em></span> e <span class="math inline"><em>d</em><sub>1</sub> ≠ 0</span>, pois a representação deve estar sempre normalizada e <span class="math inline"><em>d</em><sub>1</sub>, <em>d</em><sub>2</sub>, …, <em>d</em><sub><em>p</em></sub> ∈ {0, 1, …, <em>β</em> − 1}</span></p>
+<p>Sua tarefa é dado um sistema em ponto flutuante devolva o menor e o maior número representado nesse sistema F como uma fração.</p>
+<p><strong>Entrada</strong></p>
+<p>A entrada é composta por 4 números inteiros representando a base <span class="math inline"><em>β</em></span>, a precisão <span class="math inline"><em>p</em></span> e os limitantes do expoente <span class="math inline"><em>m</em></span> e <span class="math inline"><em>M</em></span>.</p>
+<p><strong>Saída</strong></p>
+<p>A saída é composta por dois números inteiros representando o númerador e o denominador do maior e do menor número representado no sistema em ponto flutuante.</p>
+<p><strong>Restrições:</strong></p>
+<ul>
+<li><span class="math inline"><em>M</em> ≥ 0</span></li>
+<li><span class="math inline"><em>m</em> ≤ 0</span></li>
+<li><span class="math inline"><em>β</em> &gt; 0</span></li>
+<li><span class="math inline"><em>p</em> ≥ 0</span></li>
+</ul>
+<p><strong>Entrada</strong></p>
+<pre><code>10 4 -3 3</code></pre>
+<p><strong>Saída</strong></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="ex">9999/10</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a><span class="ex">1/10000</span></span></code></pre></div>
+<p><strong>Entrada</strong></p>
+<pre><code>2 3 -3 3</code></pre>
+<p><strong>Saída</strong></p>
+<pre><code>7/1
+1/16</code></pre>

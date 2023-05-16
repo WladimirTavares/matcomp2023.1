@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Readme</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+</head>
+<body>
+<h1 id="brincadeira-do-augusto">Brincadeira do Augusto</h1>
+<p>Augusto gosta muito da seguinte brincadeira: dada a sequência 1, 2, 3, 4, 5, qual é a próximo número? Às vezes é muito fácil responder, às vezes pode ser bem difícil. Augusto notou que essas perguntas podem ser resolvidas descrevendo a sequência usando polinômios. Por exemplo, a seqüência 1, 2, 3, 4, 5 pode ser facilmente entendida como um polinômio trivial, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">P(n)=n</annotation></semantics></math> . O próximo número será 6. Mas sequências ainda mais complexas, como 1, 2, 4, 7, 11, podem ser descritas por um polinômio. Neste caso, o polinômio que descreve esta sequência é <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><msup><mi>n</mi><mn>2</mn></msup><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>n</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\frac{1}{2}n^2 - \frac{1}{2}n+1</annotation></semantics></math> . Note que mesmo se os membros da sequência são inteiros, os coeficientes polinomiais podem ser quaisquer números reais.</p>
+<p>Um polinômio é uma expressão da seguinte forma:</p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msub><mi>a</mi><mi>D</mi></msub><msup><mi>x</mi><mi>D</mi></msup><mo>+</mo><msub><mi>a</mi><mrow><mi>D</mi><mo>−</mo><mn>1</mn></mrow></msub><msup><mi>n</mi><mrow><mi>D</mi><mo>−</mo><mn>1</mn></mrow></msup><mo>+</mo><mi>…</mi><mo>+</mo><msub><mi>a</mi><mn>1</mn></msub><mi>n</mi><mo>+</mo><msub><mi>a</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">P(n) = a_Dx^D + a_{D-1}n^{D-1} + \ldots + a_1n + a_0</annotation></semantics></math></p>
+<p>Se <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>D</mi></msub><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">a_D \neq 0</annotation></semantics></math> , o número <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>D</mi><annotation encoding="application/x-tex">D</annotation></semantics></math> é chamado de grau do polinômio. Note que a função constante <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">P (n) = C</annotation></semantics></math> pode ser considerado como polinômio de grau 0.</p>
+<p>Sua tarefa é dada uma sequência com comprimento N encontre o menor grau de um polinômio que pode ser usado para descrever uma sequência.</p>
+<p><strong>Entrada</strong></p>
+<p>A entrada do problema é composta por duas linhas. A primeira linha possui um inteiro N representando o comprimento da sequência dada.</p>
+<p>A segunda linha contém N números inteiros <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>,</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi>.</mi><mi>.</mi><mo>,</mo><msub><mi>x</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">x_0,x_1,..,x_{n-1}</annotation></semantics></math> separados por um espaço. Esses números forma a sequência dada.</p>
+<p><strong>Saída</strong></p>
+<p>Imprima um inteiro D representando o menor grau possível de um polinômio P(n) tal que <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>i</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msub><mi>x</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">P(i) = x_i</annotation></semantics></math>, para todo <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mo>=</mo><mn>0</mn><mo>,</mo><mi>.</mi><mi>.</mi><mo>,</mo><mi>n</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">i = 0, .., n-1</annotation></semantics></math>.</p>
+<p><strong>Entrada</strong></p>
+<pre><code>5
+1 2 3 4 5</code></pre>
+<p><strong>Saída</strong></p>
+<pre><code>1</code></pre>
+<p><strong>Entrada</strong></p>
+<pre><code>5
+1 2 4 7 11</code></pre>
+<p><strong>Saída</strong></p>
+<pre><code>2</code></pre>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<h1 id="representação-de-números-decimais">Representação de números decimais</h1>
+<p>Um sistema em ponto flutuante é definido por uma base <span class="math inline"><em>β</em></span>, por uma precisão <span class="math inline"><em>p</em></span> e por limitantes <span class="math inline"><em>m</em></span> e <span class="math inline"><em>M</em></span> para o valor do expoente. Para indicar um determinado sistema em ponto flutuante, escrevemos:</p>
+<p><br /><span class="math display"><em>F</em>(<em>β</em>, <em>p</em>, <em>m</em>, <em>M</em>)</span><br /></p>
+<p>Um número qualquer representado nesse sistema F é escrito da seguinte forma:</p>
+<p><br /><span class="math display"><em>x</em> =  ± 0.<em>d</em><sub>1</sub><em>d</em><sub>2</sub>…<em>d</em><sub><em>p</em></sub> × <em>β</em><sup><em>e</em></sup></span><br /></p>
+<p>onde o expoente <span class="math inline"><em>e</em></span> é um inteiro tal que <span class="math inline"><em>m</em> ≤ <em>e</em> ≤ <em>M</em></span> e <span class="math inline"><em>d</em><sub>1</sub> ≠ 0</span>, pois a representação deve estar sempre normalizada e <span class="math inline"><em>d</em><sub>1</sub>, <em>d</em><sub>2</sub>, …, <em>d</em><sub><em>p</em></sub> ∈ {0, 1, …, <em>β</em> − 1}</span></p>
+<p>Uma fração decimal (chamada simplesmente de números decimais em alguns contextos) é número racional que pode ser representado com frações cujo denominadores são potências de 10. Por exemplo, os decimais 0.8 e 14.89 representam as frações <span class="math inline">8/10</span> e <span class="math inline">1489/100</span>.</p>
+<p>Esses números decimais podem ser representados como aproximações em sistemas em ponto flutuante com a base diferente da base 10.</p>
+<p>O processo de conversão de um número decimal para um número ponto flutuante na base <span class="math inline"><em>β</em></span> pode ser realizado da seguinte maneira. Multiplique o número <span class="math inline"><em>x</em></span> pela base <span class="math inline"><em>β</em></span>. Em seguida, calcule a parte inteira de <span class="math inline"><em>β</em> * <em>x</em></span> e a parte fracionária de <span class="math inline"><em>β</em> * <em>x</em></span>. Observe que se <span class="math inline"><em>β</em> * <em>x</em> ≥ 1</span> então <span class="math inline"><em>x</em> ≥ 1/<em>β</em></span>. Logo, se a parte inteira de <span class="math inline"><em>β</em> * <em>x</em></span> representa o primeiro dígito do número ponto flutuante <span class="math inline"><em>x</em></span> na base <span class="math inline"><em>β</em></span>. Em seguida, <span class="math inline"><em>x</em></span> recebe o valor da parte fracionária de <span class="math inline"><em>β</em> * <em>x</em></span>.</p>
+<p>Considere que você queira representar número decimal 0.375 em um sistema em ponto flutuante com a base 2.</p>
+<table>
+<thead>
+<tr class="header">
+<th>x</th>
+<th>2*x</th>
+<th>integerPart(2*x)</th>
+<th>FractionalPart(2*x)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0.375</td>
+<td>0.75</td>
+<td>0</td>
+<td>0.75</td>
+</tr>
+</tbody>
+</table>
+<p>O primeiro dígito de <span class="math inline"><em>x</em></span> no sistema em ponto flutuante é 0.</p>
+<p>Continuando o processo:</p>
+<table>
+<thead>
+<tr class="header">
+<th>x</th>
+<th>2*x</th>
+<th>integerPart(x)</th>
+<th>FractionalPart(x)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0.375</td>
+<td>0.75</td>
+<td>0</td>
+<td>0.75</td>
+</tr>
+<tr class="even">
+<td>0.75</td>
+<td>1.5</td>
+<td>1</td>
+<td>0.5</td>
+</tr>
+</tbody>
+</table>
+<p>O segundo dígito de <span class="math inline"><em>x</em></span> no sistema em ponto flutuante é 1.</p>
+<p>Continuando o processo:</p>
+<table>
+<thead>
+<tr class="header">
+<th>x</th>
+<th>2*x</th>
+<th>integerPart(x)</th>
+<th>FractionalPart(x)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0.375</td>
+<td>0.75</td>
+<td>0</td>
+<td>0.75</td>
+</tr>
+<tr class="even">
+<td>0.75</td>
+<td>1.5</td>
+<td>1</td>
+<td>0.5</td>
+</tr>
+<tr class="odd">
+<td>0.5</td>
+<td>1.0</td>
+<td>1</td>
+<td>0.0</td>
+</tr>
+</tbody>
+</table>
+<p>O terceiro dígito de <span class="math inline"><em>x</em></span> no sistema em ponto flutuante é 1.</p>
+<p>Logo, o número <span class="math inline">(0.375)<sub>10</sub></span> é representado como <span class="math inline">(0.011)<sub>2</sub></span>. Como o primeiro dígito do sistema em ponto flutuante não pode ser zero, então <span class="math inline">(0.011)<sub>2</sub> = 0.11 × 2<sup> − 1</sup></span>.</p>
+<p>Observe que esse processo pode continuar indefinidamente. Neste caso, podemos interromper o processo considerando a precisão do nosso sistema em ponto flutuante.</p>
+<p>Sua tarefa é dado um número decimal <span class="math inline"><em>x</em></span> e um sistema em ponto fluatuante <span class="math inline"><em>F</em>(<em>β</em>, <em>p</em>, <em>m</em>, <em>M</em>)</span>, encontre a representação de <span class="math inline"><em>x</em></span> no sistema <span class="math inline"><em>F</em></span>.</p>
+<p><strong>Entrada</strong></p>
+<p>A entrada é composta por duas linhas. A primeira linha contém uma fração decimal. A segunda linha é composta por 4 números inteiros representando a base <span class="math inline"><em>β</em></span>, a precisão <span class="math inline"><em>p</em></span> e os limitantes do expoente <span class="math inline"><em>m</em></span> e <span class="math inline"><em>M</em></span>.</p>
+<p><strong>Saída</strong></p>
+<p>A saída é composta por uma string representando os dígitos do sistema em ponto flutuante e um inteiro representando o expoente no sistema em ponto flutuante.</p>
+<p><strong>Restrições:</strong></p>
+<ul>
+<li><span class="math inline"><em>M</em> ≥ 0</span></li>
+<li><span class="math inline"><em>m</em> ≤ 0</span></li>
+<li><span class="math inline"><em>β</em> &gt; 0</span></li>
+<li><span class="math inline"><em>p</em> ≥ 0</span></li>
+<li><span class="math inline"><em>x</em> &lt; 0</span></li>
+</ul>
+<p><strong>Entrada</strong></p>
+<pre><code>0.1
+2 10 -5 5</code></pre>
+<p><strong>Saída</strong></p>
+<pre><code>0.1100110011 -3</code></pre>
+<p><strong>Entrada</strong></p>
+<pre><code>0.2 
+2 10 -5 5</code></pre>
+<p><strong>Saída</strong></p>
+<pre><code>0.1100110011 -2</code></pre>
